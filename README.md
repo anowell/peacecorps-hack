@@ -4,7 +4,7 @@ peacecorps-hack
 Peace Corps opportunity explorer (proof-of-concept hack): http://peacecorps.anowell.com
 
 This project was a quick proof-of-concept for a Peace Corps challenge on NDoCH 2014:
-http://hackforchange.org/challenges/peace-corps-opportunities-interface/(]
+http://hackforchange.org/challenges/peace-corps-opportunities-interface/
 
 
 Getting Started
