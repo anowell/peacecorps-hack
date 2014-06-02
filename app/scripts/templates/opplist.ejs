@@ -1,0 +1,45 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Volunteer opportunties</h1>
+
+      <% if(locations.length > 0 && sectors.length > 0) { %>
+        <div class="alert alert-success">
+          Showing
+          <% sectors.forEach(function(sector) { %>
+            <span class="label label-primary"><%= sector %></span>
+          <% }) %>
+          opportunites in
+          <% locations.forEach(function(location) { %>
+            <span class="label label-primary"><%= location %></span>
+          <% }) %>
+        </div>
+      <% } %>
+
+      <% if(sectors.length === 0 || locations.length === 0) { %>
+        <div class="alert alert-warning">You must specify at least one country and sector above.</div>
+      <% } else if(opps.length === 0) { %>
+        <div class="alert alert-warning">There are no opportunities that meet your search criteria.</div>
+      <% } %>
+    </div>
+  </div>
+
+  <% var colors = ["purple", "red", "orange", "green", "blue"] %>
+  <% _.each(opps, function(opp, i) { %>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="tile <%= colors[i%colors.length] %>">
+            <h3 class="title">
+              <%= opp.location %>:
+              <% if(opp.title) { %>
+                <%= opp.title.substr(opp.title.indexOf(" ") + 1) %>
+              <% } %>
+            </h3>
+          <p><%= opp.proj_desc %></p>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+
+</div>

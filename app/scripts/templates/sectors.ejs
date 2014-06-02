@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Selecting one or more sectors to explore</h1>
+    </div>
+  </div>
+
+  <% var colors = ["purple", "red", "orange", "green", "blue"] %>
+  <% _.each(sectors, function(sector, i) { %>
+    <% if(i%3 === 0) { %>
+      <div class="row">
+    <% } %>
+
+    <div class="col-sm-4">
+      <div class="tile <%= colors[i%colors.length] %>">
+         <span class="glyphicon glyphicon-ok"></span>
+         <h3 class="title"><%= sector %></h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+      </div>
+    </div>
+
+    <% if(i%3 === 2 || i === sectors.length-1) { %>
+      </div>
+    <% } %>
+  <% }); %>
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <button type="button" class="next btn btn-default btn-lg btn-block">
+        <span class="glyphicon glyphicon-arrow-down"></span>
+        &nbsp;&nbsp;&nbsp;&nbsp;Next&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="glyphicon glyphicon-arrow-down"></span>
+      </button>
+    </div>
+  </div>
+
+</div>

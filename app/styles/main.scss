@@ -1,0 +1,98 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+@import 'sass-bootstrap/lib/bootstrap';
+
+body {
+  padding-top: 50px;
+}
+
+.pane {
+  margin-bottom: 200px;
+}
+
+#map {
+  border-top: 1px solid #000;
+  // border-bottom: 1px solid #000;
+  width: 100%;
+  left: 0;
+}
+
+#map-select {
+  line-height: 68px;
+  font-size: 36px;
+}
+
+
+$color_purple: #5133AB;
+$color_red: #AC193D;
+$color_orange: #DC572E;
+$color_green: #00A600;
+$color_blue: #2672EC;
+
+.tile .glyphicon-ok {
+  float: right;
+  font-size: 24px;
+  visibility: hidden;
+}
+
+.tile.selected .glyphicon-ok {
+  visibility: visible;
+}
+
+.tile {
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  cursor: pointer;
+
+  .title {
+      margin-top: 0px;
+  }
+
+  &.purple, &.blue, &.red, &.orange, &.green {
+    color: #fff;
+  }
+
+  &.purple {
+    background: $color_purple;
+
+    &:hover {
+        background: darken($color_purple, 10%);
+    }
+  }
+
+  &.red {
+    background: $color_red;
+
+    &:hover {
+        background: darken($color_red, 10%);
+    }
+  }
+
+  &.green {
+    background: $color_green;
+
+    &:hover {
+        background: darken($color_green, 10%);
+    }
+  }
+
+  &.blue {
+    background: $color_blue;
+
+    &:hover {
+        background: darken($color_blue, 10%);
+    }
+  }
+
+  &.orange {
+    background: $color_orange;
+
+    &:hover {
+        background: darken($color_orange, 10%);
+    }
+  }
+}
